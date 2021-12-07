@@ -1,0 +1,47 @@
+<configuration>
+<!--    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>-->
+    <property  name="LOG" value="./log"/>
+    <property  name="LOGFILENAME" />
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </layout>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG}/${LOGFILENAME}</file>
+        <append>true</append>
+        <encoder>
+            <Pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <root level="info" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"></appender-ref>
+    </root>
+</configuration>
+<!--<configuration scan="true" scanPeriod="60 seconds" trace="true">-->
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--&lt;!&ndash;        <file>./log/log.log</file>&ndash;&gt;-->
+<!--        <fileNamePattern>./log/i-0edc8328304543e05.%d{yyyy-MM-dd HH:mm:ss}.log</fileNamePattern>-->
+<!--&lt;!&ndash;        <fileNamePattern>./log/i-0edc8328304543e05.%d{yyyy-MM-dd}.log</fileNamePattern>&ndash;&gt;-->
+<!--        <append>true</append>-->
+<!--        <immediateFlush>true</immediateFlush>-->
+
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Configure so that it outputs to both console and log file &ndash;&gt;-->
+<!--    <root level="debug">-->
+<!--        <appender-ref ref="FILE" />-->
+<!--        <appender-ref ref="STDOUT" />-->
+<!--    </root>-->
+<!--</configuration>-->
