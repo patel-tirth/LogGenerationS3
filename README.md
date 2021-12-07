@@ -1,4 +1,8 @@
-# Homework 3
+#### Log Generation program to generate logs and store in aws s3 bucket.
+
+``` sbt clean compile run ```
+
+<!-- # Homework 3
 ### The goal of this homework is for students to gain experience with solving a distributed computational problem using cloud computing technologies by designing and implementing a RESTful service and a lambda function that are accessed from clients using gRPC.
 ### Grade: 8%
 #### This Git repo contains the description of the third and final homework that uses this implementation of a log file generator in Scala. Students should clone this repo using the command ```git clone git@github.com:0x1DOCD00D/LogFileGenerator.git```.
@@ -97,3 +101,4 @@ Wednesday, November 3, 2021 at 11:59PM CST via email to the instructor and your 
 - the minimum grade for this homework cannot be less than zero.
 
 That's it, folks!
+ -->
